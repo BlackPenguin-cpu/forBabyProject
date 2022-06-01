@@ -25,9 +25,18 @@ public class DrawManager : MonoBehaviour
                 }
             }
         }
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonUp(0) && onMouseClick)
         {
+            RaycastHit2D[] objs = Physics2D.RaycastAll(Camera.main.WorldToScreenPoint(Input.mousePosition), Vector3.forward);
+            foreach (var obj in objs)
+            {
+                if (obj.transform.CompareTag("EndPoint"))
+                {
+                    curImage = obj.transform.GetChild(0).GetComponent<Image>();
+                }
+            }
 
+            onMouseClick = false;
         }
     }
     void nowStart()
