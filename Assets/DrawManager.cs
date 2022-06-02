@@ -12,6 +12,10 @@ public class DrawManager : MonoBehaviour
     {
         MouseInput();
         MouseParticle();
+        if (onMouseClick)
+        {
+            onBrushing();
+        }
     }
     void MouseInput()
     {
@@ -26,13 +30,13 @@ public class DrawManager : MonoBehaviour
     }
     void onBrushing()
     {
-        Instantiate(Brush, Camera.main.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity);
+        Instantiate(Brush, Camera.main.ScreenToWorldPoint(Input.mousePosition) + Vector3.forward * 10, Quaternion.identity);
     }
     void MouseParticle()
     {
-        if (!particle.isPlaying && onMouseClick)
+        if (!particle.isEmitting && onMouseClick)
             particle.Play();
-        else if (particle.isPlaying && !onMouseClick)
+        else if (particle.isEmitting && !onMouseClick)
             particle.Stop();
         particle.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + Vector3.forward * 10;
     }
