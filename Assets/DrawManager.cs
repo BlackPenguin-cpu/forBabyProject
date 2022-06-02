@@ -7,11 +7,23 @@ public class DrawManager : MonoBehaviour
     [SerializeField] bool onMouseClick;
     [SerializeField] ParticleSystem particle;
     [SerializeField] GameObject Brush;
+    [SerializeField] GameObject TextEffect;
 
     void Update()
     {
         MouseInput();
         MouseParticle();
+    }
+    void onComplete()
+    {
+        Instantiate(TextEffect, new Vector2(Random.Range(-6f, 6f), -5), Quaternion.identity);
+    }
+    private void FixedUpdate()
+    {
+        if (Input.GetKey(KeyCode.A))
+        {
+            onComplete();
+        }
         if (onMouseClick)
         {
             onBrushing();

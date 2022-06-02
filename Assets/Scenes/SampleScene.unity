@@ -155,6 +155,8 @@ MonoBehaviour:
   onMouseClick: 0
   particle: {fileID: 863886683}
   Brush: {fileID: 6513143930395430425, guid: 71436ef85ef9bb24498c3126a90d4831, type: 3}
+  TextEffect: {fileID: 3168591880201214312, guid: ea861b84b1d0cb046bb520e30e822843,
+    type: 3}
 --- !u!4 &88495935
 Transform:
   m_ObjectHideFlags: 0
@@ -167,7 +169,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!21 &365806601
 Material:
@@ -178,7 +180,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: AllIn1SpriteShader/AllIn1SpriteShader
   m_Shader: {fileID: 4800000, guid: a36b7719ff0465b42ab1407d67672c5f, type: 3}
-  m_ShaderKeywords: GLITCH_ON HOLOGRAM_ON
+  m_ShaderKeywords: GRADIENT_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -669,7 +671,7 @@ PrefabInstance:
     - target: {fileID: 844351111047522259, guid: d0ed58dce91845348abb7705c2310b66,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 844351111047522259, guid: d0ed58dce91845348abb7705c2310b66,
         type: 3}
