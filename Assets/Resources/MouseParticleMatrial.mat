@@ -154,8 +154,8 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Glow: 20
-    - _GlowGlobal: 5
+    - _Glow: 15.5
+    - _GlowGlobal: 10.3
     - _GradBlend: 1
     - _GradBoostX: 1.2
     - _GradBoostY: 1.2
