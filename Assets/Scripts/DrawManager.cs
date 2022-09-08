@@ -9,6 +9,7 @@ public class DrawManager : MonoBehaviour
     [SerializeField] GameObject Brush;
     [SerializeField] GameObject TextEffect;
 
+    private Camera mainCamera;
     private float curTime;
 
     void Update()
@@ -50,11 +51,11 @@ public class DrawManager : MonoBehaviour
     void onBrushing()
     {
         if (OnChecking())
-            Instantiate(Brush, Camera.main.ScreenToWorldPoint(Input.mousePosition) + Vector3.forward * 10, Quaternion.identity);
+            ObjectPool.Instance.CreateObj(Brush, mainCamera.ScreenToWorldPoint(Input.mousePosition) + Vector3.forward * 10, Quaternion.identity);
     }
     bool OnChecking()
     {
-        RaycastHit2D[] rays = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.forward);
+        RaycastHit2D[] rays = Physics2D.RaycastAll(mainCamera.ScreenToWorldPoint(Input.mousePosition), Vector3.forward);
 
         foreach (RaycastHit2D ray in rays)
         {
@@ -64,6 +65,10 @@ public class DrawManager : MonoBehaviour
             }
         }
         return false;
+    }
+    private void Start()
+    {
+        mainCamera = Camera.main;
     }
     void MouseParticle()
     {

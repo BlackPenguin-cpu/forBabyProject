@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1093818076904302249}
   - component: {fileID: 4822302189169659447}
   - component: {fileID: 3318151083646229248}
+  - component: {fileID: 213209439321505906}
   m_Layer: 0
   m_Name: Brush
   m_TagString: Untagged
@@ -134,3 +135,15 @@ SpriteMask:
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 0
   m_SpriteSortPoint: 0
+--- !u!114 &213209439321505906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6513143930395430425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c344525a256fd0f4787d25cdbbb630d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

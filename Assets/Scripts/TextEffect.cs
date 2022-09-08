@@ -5,7 +5,6 @@ using UnityEngine;
 public class TextEffect : MonoBehaviour
 {
     float Rotatedir;
-    AllIn1SpriteShaderMaterialInspector allIn1Sprite;
     SpriteRenderer spriteRenderer => GetComponent<SpriteRenderer>();
     private void Start()
     {
